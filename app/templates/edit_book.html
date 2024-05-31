@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title(size=64) }}
+        </p>
+        <p>
+            {{ form.author.label }}<br>
+            {{ form.author(size=64) }}
+        </p>
+        <p>
+            {{ form.genre.label }}<br>
+            {{ form.genre(size=64) }}
+        </p>
+        <p>
+            {{ form.publication_date.label }}<br>
+            {{ form.publication_date() }}
+        </p>
+        <p>
+            {{ form.summary.label }}<br>
+            {{ form.summary(rows=4, cols=40) }}
+        </p>
+        <p>
+            {{ form.rating.label }}<br>
+            {{ form.rating() }}
+        </p>
+        <p>
+            {{ form.status.label }}<br>
+            {{ form.status() }}
+        </p>
+        <p>
+            {{ form.date_started.label }}<br>
+            {{ form.date_started() }}
+        </p>
+        <p>
+            {{ form.date_finished.label }}<br>
+            {{ form.date_finished() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
